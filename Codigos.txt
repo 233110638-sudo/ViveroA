@@ -1,0 +1,108 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const ViveroApp());
+}
+
+class ViveroApp extends StatelessWidget {
+  const ViveroApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Vivero+',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Vivero+'),
+          backgroundColor: const Color.fromRGBO(12, 145, 216, 1),
+        ),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(16.0),
+                  decoration: BoxDecoration(
+                    color: const Color.fromRGBO(12, 145, 216, 1),
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  child: const Icon(
+                    Icons.eco,
+                    size: 77,
+                    color: Color.fromARGB(255, 7, 71, 106),
+                  ),
+                ),
+                const SizedBox(height: 24.0),
+                const Text(
+                  'Bienvenidos a Vivero+',
+                  style: TextStyle(
+                    fontSize: 26.0,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromRGBO(3, 58, 88, 1),
+                  ),
+                ),
+                const SizedBox(height: 8.0),
+                const Text(
+                  'Tira la basura no seas puerco',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color.fromRGBO(13, 130, 193, 1),
+                  ),
+                ),
+                const SizedBox(height: 36.0),
+                Row(
+                  children: [
+                    Expanded(
+                      child: _StatCard(
+                        icon: Icons.local_florist,
+                        label: '12 plantas',
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: _StatCard(
+                        icon: Icons.water_drop,
+                        label: '3 por regar',
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _StatCard extends StatelessWidget {
+  final IconData icon;
+  final String label;
+
+  const _StatCard({required this.icon, required this.label});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 16),
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 102, 149, 231),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        children: [
+          Icon(icon, color: const Color.fromARGB(255, 44, 206, 138)),
+          const SizedBox(height: 8),
+          Text(
+            label,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+          ),
+        ],
+      ),
+    );
+  }
+}

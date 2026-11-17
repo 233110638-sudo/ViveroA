@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "820760089750",
+    "firebase_url": "https://viveroa-17da7-default-rtdb.firebaseio.com",
+    "project_id": "viveroa-17da7",
+    "storage_bucket": "viveroa-17da7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820760089750:android:eda34b9400fc83f40a5eb7",
+        "android_client_info": {
+          "package_name": "com.example.viveroa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsWMsHMUJ0DpYRPJ4VzFnWbV6VbnQpcWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
